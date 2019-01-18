@@ -1,5 +1,30 @@
 // Mixins in here
-.Flex(@justify: center) {
+.flex(@justify:center, @align:center) {
   display: flex;
+  flex-flow: row wrap;
   justify-content: @justify;
+  align-items: @align;
+}
+
+.flexMobile(@column:column) {
+  @media @mobile {
+    .flex(center, center);
+    flex-flow: @column nowrap;
+  }
+}
+
+.paddingMobile(@leftpadding:4%, @rightpadding:4%) {
+  @media @mobile {
+    padding-left: @leftpadding;
+    padding-right: @rightpadding;
+  }
+}
+
+.button(@text-fg, @button-bg, @fatness, @corner) {
+  text-align: center;
+  color: @text-fg;
+  font-size: @fatness;
+  padding: @fatness;
+  background-color: @button-bg;
+  border-radius: @corner;
 }

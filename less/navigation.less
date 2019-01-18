@@ -1,10 +1,32 @@
 // Navigation Styles here
 nav {
-  .Flex(space-between);
+  border-bottom: 2px dashed @navigation-border;
+  .container {
+    padding: 15px 0;
+    .flex(space-between);
+
+    @media @mobile {
+      padding-bottom: 0px;
+    }
+    .funBus {
+      padding: 5px;
+      padding-left: 0px;
+      @media @mobile {
+        .flex;
+        min-width: 100%;
+      }
+    }
+  }
+
 
   .block {
+    padding: 16px;
     min-width: 50%;
-    .Flex(space-around);
+    .flex(space-around);
+
+    @media @mobile {
+      min-width: 100%;
+    }
   }
 
   a {
@@ -12,4 +34,5 @@ nav {
     text-decoration: none;
     color: black;
   }
+
 }
