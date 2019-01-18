@@ -1,1 +1,38 @@
 // Navigation Styles here
+nav {
+  border-bottom: 2px dashed @navigation-border;
+  .container {
+    padding: 15px 0;
+    .flex(space-between);
+
+    @media @mobile {
+      padding-bottom: 0px;
+    }
+    .funBus {
+      padding: 5px;
+      padding-left: 0px;
+      @media @mobile {
+        .flex;
+        min-width: 100%;
+      }
+    }
+  }
+
+
+  .block {
+    padding: 16px;
+    min-width: 50%;
+    .flex(space-around);
+
+    @media @mobile {
+      min-width: 100%;
+    }
+  }
+
+  a {
+    font-size: 1.6rem;
+    text-decoration: none;
+    color: black;
+  }
+
+}
